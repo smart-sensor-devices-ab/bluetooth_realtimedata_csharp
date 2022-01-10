@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BleuIO_WFA_example", "WindowsFormsApp1\BleuIO_WFA_example.csproj", "{B857C994-C41C-414E-8246-6EDC386AAA42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B857C994-C41C-414E-8246-6EDC386AAA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B857C994-C41C-414E-8246-6EDC386AAA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B857C994-C41C-414E-8246-6EDC386AAA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B857C994-C41C-414E-8246-6EDC386AAA42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C709688C-9982-47C7-9DC8-73EC0D5396E0}
+	EndGlobalSection
+EndGlobal
