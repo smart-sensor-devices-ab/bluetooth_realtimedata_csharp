@@ -1,5 +1,5 @@
-## Create Bluetooth Low Energy Application using C#
-This is a sample script showing how to create Bluetooth Low Energy Application using C#
+## Get real time Bluetooth device data using c#
+This is a sample script showing how to create Bluetooth Low Energy Application using C#. The application gets realtime HibouAir advertised data and show it on the screen.
 ###  Requirments 
 - [BlueIO](https://www.bleuio.com/index.php) 
 

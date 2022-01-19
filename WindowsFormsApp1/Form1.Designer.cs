@@ -28,28 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bnt_connect = new System.Windows.Forms.Button();
             this.lbl_test = new System.Windows.Forms.Label();
-            this.tb_cmd = new System.Windows.Forms.TextBox();
-            this.submit_cmd = new System.Windows.Forms.Button();
             this.btn_disconnect = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_stop = new System.Windows.Forms.Button();
-            this.output_data = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_deviceList = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dropdown_device = new System.Windows.Forms.ComboBox();
+            this.btnGetData = new System.Windows.Forms.Button();
+            this.sensor_op = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bnt_connect
-            // 
-            this.bnt_connect.Location = new System.Drawing.Point(101, 84);
-            this.bnt_connect.Name = "bnt_connect";
-            this.bnt_connect.Size = new System.Drawing.Size(75, 23);
-            this.bnt_connect.TabIndex = 0;
-            this.bnt_connect.Text = "Connect ";
-            this.bnt_connect.UseVisualStyleBackColor = true;
-            this.bnt_connect.Click += new System.EventHandler(this.button1_Click);
             // 
             // lbl_test
             // 
@@ -59,28 +48,9 @@
             this.lbl_test.Size = new System.Drawing.Size(0, 13);
             this.lbl_test.TabIndex = 2;
             // 
-            // tb_cmd
-            // 
-            this.tb_cmd.Location = new System.Drawing.Point(223, 151);
-            this.tb_cmd.Multiline = true;
-            this.tb_cmd.Name = "tb_cmd";
-            this.tb_cmd.Size = new System.Drawing.Size(100, 20);
-            this.tb_cmd.TabIndex = 3;
-            this.tb_cmd.TextChanged += new System.EventHandler(this.tb_cmd_TextChanged);
-            // 
-            // submit_cmd
-            // 
-            this.submit_cmd.Location = new System.Drawing.Point(354, 148);
-            this.submit_cmd.Name = "submit_cmd";
-            this.submit_cmd.Size = new System.Drawing.Size(100, 23);
-            this.submit_cmd.TabIndex = 4;
-            this.submit_cmd.Text = "Submit Command";
-            this.submit_cmd.UseVisualStyleBackColor = true;
-            this.submit_cmd.Click += new System.EventHandler(this.submit_cmd_Click);
-            // 
             // btn_disconnect
             // 
-            this.btn_disconnect.Location = new System.Drawing.Point(379, 84);
+            this.btn_disconnect.Location = new System.Drawing.Point(703, 27);
             this.btn_disconnect.Name = "btn_disconnect";
             this.btn_disconnect.Size = new System.Drawing.Size(75, 23);
             this.btn_disconnect.TabIndex = 5;
@@ -88,45 +58,14 @@
             this.btn_disconnect.UseVisualStyleBackColor = true;
             this.btn_disconnect.Click += new System.EventHandler(this.btn_disconnect_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(98, 153);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Write AT Commands";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 207);
+            this.label3.Location = new System.Drawing.Point(98, 171);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 13);
+            this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Response from BleuIO";
-            // 
-            // btn_stop
-            // 
-            this.btn_stop.Location = new System.Drawing.Point(521, 84);
-            this.btn_stop.Name = "btn_stop";
-            this.btn_stop.Size = new System.Drawing.Size(75, 23);
-            this.btn_stop.TabIndex = 9;
-            this.btn_stop.Text = "Stop";
-            this.btn_stop.UseVisualStyleBackColor = true;
-            this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
-            // 
-            // output_data
-            // 
-            this.output_data.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.output_data.Location = new System.Drawing.Point(223, 207);
-            this.output_data.Multiline = true;
-            this.output_data.Name = "output_data";
-            this.output_data.ReadOnly = true;
-            this.output_data.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.output_data.Size = new System.Drawing.Size(540, 213);
-            this.output_data.TabIndex = 10;
-            this.output_data.TextChanged += new System.EventHandler(this.output_data_TextChanged);
+            this.label3.Text = "Sensor Value";
             // 
             // pictureBox1
             // 
@@ -138,21 +77,71 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btn_deviceList
+            // 
+            this.btn_deviceList.Location = new System.Drawing.Point(101, 89);
+            this.btn_deviceList.Name = "btn_deviceList";
+            this.btn_deviceList.Size = new System.Drawing.Size(183, 23);
+            this.btn_deviceList.TabIndex = 12;
+            this.btn_deviceList.Text = "Scan for HibouAir Devices";
+            this.btn_deviceList.UseVisualStyleBackColor = true;
+            this.btn_deviceList.Click += new System.EventHandler(this.btn_deviceList_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(521, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // dropdown_device
+            // 
+            this.dropdown_device.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropdown_device.FormattingEnabled = true;
+            this.dropdown_device.Items.AddRange(new object[] {
+            "Load Devices"});
+            this.dropdown_device.Location = new System.Drawing.Point(101, 132);
+            this.dropdown_device.Name = "dropdown_device";
+            this.dropdown_device.Size = new System.Drawing.Size(280, 21);
+            this.dropdown_device.TabIndex = 14;
+            this.dropdown_device.SelectedIndexChanged += new System.EventHandler(this.dropdown_device_SelectedIndexChanged);
+            // 
+            // btnGetData
+            // 
+            this.btnGetData.Location = new System.Drawing.Point(412, 130);
+            this.btnGetData.Name = "btnGetData";
+            this.btnGetData.Size = new System.Drawing.Size(75, 23);
+            this.btnGetData.TabIndex = 15;
+            this.btnGetData.Text = "Get Data";
+            this.btnGetData.UseVisualStyleBackColor = true;
+            this.btnGetData.Visible = false;
+            this.btnGetData.Click += new System.EventHandler(this.btnGetData_Click);
+            // 
+            // sensor_op
+            // 
+            this.sensor_op.AutoSize = true;
+            this.sensor_op.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sensor_op.Location = new System.Drawing.Point(98, 197);
+            this.sensor_op.Name = "sensor_op";
+            this.sensor_op.Size = new System.Drawing.Size(0, 16);
+            this.sensor_op.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.sensor_op);
+            this.Controls.Add(this.btnGetData);
+            this.Controls.Add(this.dropdown_device);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_deviceList);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.output_data);
-            this.Controls.Add(this.btn_stop);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_disconnect);
-            this.Controls.Add(this.submit_cmd);
-            this.Controls.Add(this.tb_cmd);
             this.Controls.Add(this.lbl_test);
-            this.Controls.Add(this.bnt_connect);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -163,17 +152,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button bnt_connect;
         private System.Windows.Forms.Label lbl_test;
-        private System.Windows.Forms.TextBox tb_cmd;
-        private System.Windows.Forms.Button submit_cmd;
         private System.Windows.Forms.Button btn_disconnect;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_stop;
-        private System.Windows.Forms.TextBox output_data;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_deviceList;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox dropdown_device;
+        private System.Windows.Forms.Button btnGetData;
+        private System.Windows.Forms.Label sensor_op;
     }
 }
 
